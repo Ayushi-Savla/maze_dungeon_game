@@ -1,17 +1,7 @@
-
 import math
 import turtle
 import random
 from random import randint
-import pygame  # Import pygame for music and sound effects
-
-# Initialize pygame for music and sound effects
-pygame.init()
-pygame.mixer.init()
-
-# Load background music and sound effects
-pygame.mixer.music.load("music/Pufino - Chill Vibes (freetouse.com).mp3")  # Replace with your music file path
-pygame.mixer.music.play(-1)  # Play music indefinitely
 
 #window setup
 wn = turtle.Screen()
@@ -192,68 +182,10 @@ level_1 = [
     "xxxxxxxxxxxxxxxxxxxxxxxxx"
 ]
 
-level_2 = [
-    "xxxxxxxxxxxxxxxxxxxxxxxxx",
-    "x  xxxxxxx       xxxxxxxx",
-    "x  xxxxxxx xxxx  xxxxxxxx",
-    "x       xx xxxx  xxxxxxxx",
-    "x       xx  xx       T xx",
-    "xxxxxx  xx  xx    xxxx  x",
-    "xxxxxx  xx  xxxxxx  xxx x",
-    "xxxxxx  xx    xxxx  xxx x",
-    "x  xxx        xxxx  xxx x",
-    "x  xxx  xxxxxxxxxxxxxxx x",
-    "xE       xxxxxxxxxxxxx  x",
-    "xxxxxx   xxxT       xx  x",
-    "xxxxxxxxx xxxx      xx  x",
-    "xxxxxxxxx xxxx xxxx xxx x",
-    "xxxxxxxxx xx   xxxx xxx x",
-    "xx    T          xxxx   x",
-    "xx  Pxxxxxxxxxx  xxxx xxx",
-    "xx  xxxxxxxxxxxT xxx  xxx",
-    "xxE xxxxxxxxxxxxxxx    xx",
-    "xxxxxxxE     TxxxxxxE   x",
-    "xxxxxxxxxxxx  xxxxxxxxxxx",
-    "xxxxxxxxxxxx  xxxxxxxxxxx",
-    "xxxxE     xx            x",
-    "xxxx       xxT          x",
-    "xxxxxxxxxxxxxxxxxxxxxxxxx"
-]
-
-level_3 = [
-    "xxxxxxxxxxxxxxxxxxxxxxxxx",
-    "x         xxxxxxx  xxxxxx",
-    "xxx  xxxx xxxxxxT  xxxxxx",
-    "xxx      xxxxxx    xxxxxx",
-    "xxxxx xxxxxxxxxxxxxxxx xx",
-    "xxxxx xxxxE      xxxxT  x",
-    "x         xxxxxx  xxxxxx ",
-    "x  xxxxxxxxxxxx     xxxx ",
-    "x     xxxx xxxx xxxx xxxx",
-    "xE xxxxxxxx xxxx xxxxT xx",
-    "x  xxxxT xx  xx   xxxxx x",
-    "xxx xxxx xxx xxxT xxxxx x",
-    "xP          xxx xxxx    x",
-    "xxxxx xxxx  xxxxxxxxxx xx",
-    "x    Txxxx  xxxx     x  x",
-    "xxx  xxxx       xxxx xx x",
-    "xx   xxTxxxxxxx    xx xx ",
-    "xx xxxx xxxxxxxxxxxxxx xx",
-    "xx xxxx xxxxxxxxxxxxxx xx",
-    "xx      xxxxx  xx    xx  ",
-    "xxxxxT        T xx   xxE ",
-    "xxxxx   xxxx    xx  xxxx ",
-    "xxxxxxE xx    xxxx xxxxx ",
-    "xxxxxx     xxxxxxxxxxxxxx",
-    "xxxxxxxxxxxxxxxxxxxxxxxxx"
-]
-
 treasures = []
 enemies = []
 
 levels.append(level_1)
-levels.append(level_2)
-levels.append(level_3)
 
 def setup_maze(level):
     for y in range(len(level)):
@@ -352,6 +284,5 @@ while True:
             wn.update()
             turtle.bye()
             break
-
 
     wn.update()
