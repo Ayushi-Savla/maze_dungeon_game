@@ -55,7 +55,7 @@ If you'd like to contribute to the game, feel free to fork the repository and su
 ## License
 This project is licensed under the MIT License.
 
-## Author
+## Authors
 Ayushi Savla
 Victoria Mwaura
 Abigail Kariuki
