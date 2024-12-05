@@ -1,7 +1,17 @@
+
 import math
 import turtle
 import random
 from random import randint
+import pygame  # Import pygame for music and sound effects
+
+# Initialize pygame for music and sound effects
+pygame.init()
+pygame.mixer.init()
+
+# Load background music and sound effects
+pygame.mixer.music.load("music/hyper-adventure-action-231544.mp3")  # Replace with your music file path
+pygame.mixer.music.play(-1)  # Play music indefinitely
 
 #window setup
 wn = turtle.Screen()
@@ -369,5 +379,6 @@ while True:
             wn.update()
             turtle.bye()
             break
+
 
     wn.update()
