@@ -52,8 +52,6 @@ Ensure you are running a Python version that supports these modules.
 ## Contributing
 If you'd like to contribute to the game, feel free to fork the repository and submit a pull request with your changes!
 
-## License
-This project is licensed under the MIT License.
 
 ## Authors
 Ayushi Savla
