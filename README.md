@@ -9,6 +9,7 @@ To build this game, the following dependencies were used:
   1. Turtle to generate the player and the maze.
   2. Random to randomise the enemy movements.
   3. Math to calculate position of the player as well as to calculate collisions.
+You can also get the dependencies used from this file: [Game Requirements](https://github.com/Ayushi-Savla/maze_dungeon_game/blob/main/maze_dungeon/requirements.txt)
 # Installation and Running
 The game created can be created or installed through the following procedure:
   1. Download the latest version of Python onto your machine. This can be done from this link: [Download Python](https://www.python.org/downloads/). It is applicable for both Windows/MacOS systems.
