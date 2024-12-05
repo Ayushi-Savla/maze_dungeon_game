@@ -299,7 +299,6 @@ def show_transition_message():
     hud.goto(0,0)
     hud.write("LEVEL COMPLETE!", align='center', font=("Arial", 24, "bold"))
     wn.update()
-    hud.update()
     turtle.ontimer(load_next_level, 2000)
 
 def reset_game_state():
