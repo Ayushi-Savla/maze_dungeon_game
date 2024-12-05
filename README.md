@@ -1,4 +1,7 @@
 # MAZE DUNGEON GAME USING PYTHON
+
+![Screenshot 2024-12-05 235535](https://github.com/user-attachments/assets/8eed82b1-99a8-47e4-8608-787ce82302b7)
+
 # What it does
 This is a simple maze game where the player controls an animated person. They navigate through the maze as they collect different collectibles/treasures. When all collectibles/treasures have been collected, it transitions to the next level. Once all the levels have been completed within the 1 minute time duration, the game ends. The player's score is constantly updated as they collect the treasures.
 # Dependencies
