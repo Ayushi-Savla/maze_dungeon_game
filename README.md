@@ -22,42 +22,42 @@ The game challenges players with time constraints and strategic movements to max
 2. Clone the repository:
    ```bash
    git clone https://github.com/Ayushi-Savla/maze_dungeon_game
-   
+   ```
 3. Navigate to the project directory:
-  
-  cd maze_dungeon_game
-
+   ```bash
+   cd maze_dungeon_game
+   ```
 4. Install the required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-    pip install -r requirements.txt
-
-###Running the Game
-
+## Running the Game
 Run the following command in the terminal to start the game:
-
+```bash
 python main.py
+```
 
-###Dependencies
-
+## Dependencies
 The game requires the following Python modules:
-
-    math (built-in)
-    random (built-in)
-    turtle (built-in)
+- math (built-in)
+- random (built-in)
+- turtle (built-in)
 
 Ensure you are running a Python version that supports these modules.
-Screenshots
 
-![](/home/victoria-mwaura/Pictures/Screenshots/Screenshot%20from%202024-12-05%2018-08-45.png)
-Contributing
+## Screenshots
+![Game Screenshot](img.png)
 
+## Contributing
 If you'd like to contribute to the game, feel free to fork the repository and submit a pull request with your changes!
-License
 
+## License
 This project is licensed under the MIT License.
-Author
 
-
-
-
-
+## Author
+Ayushi Savla
+Victoria Mwaura
+Abigail Kariuki
+Mwenda Mugambi
+Daniella Iseu
