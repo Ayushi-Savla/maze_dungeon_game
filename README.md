@@ -29,5 +29,6 @@ The game created can be created or installed through the following procedure:
      pip install turtle
      pip install random
      pip install math
+     pip install pygame
      ```
   9. Once your environment is set, with all the dependencies and the files downloaded, run the command `python main.py` to run the main script. If using an IDE like Pycharm or Visual Studio, once you have cloned the repository, just run the main file from the IDE by clicking the **run** button.
