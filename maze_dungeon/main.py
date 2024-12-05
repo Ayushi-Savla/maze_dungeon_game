@@ -194,7 +194,7 @@ level_2 = [
     "x  xxx        xxxx  xxx x",
     "x  xxx  xxxxxxxxxxxxxxx x",
     "xE       xxxxxxxxxxxxx  x",
-    "xxxxxx   xxxT       xx  x",
+    "xxxxxx    xxT       xx  x",
     "xxxxxxxxx xxxx      xx  x",
     "xxxxxxxxx xxxx xxxx xxx x",
     "xxxxxxxxx xx   xxxx xxx x",
@@ -267,6 +267,37 @@ def setup_maze(level):
 
             if character == 'E':
                 enemies.append(Enemy(screen_x, screen_y))
+current_level = 1
+
+def load_next_level():
+    global current_level
+    current_level += 1
+    if current_level < len(levels):
+        reset_game_state()
+        setup_maze(levels[current_level])
+        hud.level = current_level
+        hud.update()
+    else:
+        hud.clear()
+        hud.goto(0, 0)
+        hud.write("YOU WIN!", align='center', font=("Arial", 24, "bold"))
+        wn.update()
+        turtle.ontimer(wn.bye, 3000)
+
+def show_transition_message():
+    hud.clear()
+    hud.goto(0,0)
+    hud.write("LEVEL COMPLETE!", align='center', font=("Arial", 24, "bold"))
+    wn.update()
+    hud.update()
+    turtle.ontimer(load_next_level, 2000)
+
+def reset_game_state():
+    global treasures, enemies, walls
+    treasures.clear()
+    enemies.clear()
+    walls.clear()
+    pen.clearstamps()
 
 pen = Pen()
 player = Player()
@@ -278,7 +309,7 @@ hud.update()
 walls = []
 
 #maze setup
-setup_maze(levels[1])
+setup_maze(levels[current_level])
 
 #user interaction through keys
 turtle.listen()
@@ -326,12 +357,8 @@ while True:
             hud.update()
         # Check if all treasures are collected
         if not treasures:
-            print("Mission Accomplished!")
-            hud.clear()
-            hud.goto(0, 0)
-            hud.write("MISSION ACCOMPLISHED", align="center", font=("Arial", 24, "bold"))
-            wn.update()
-            turtle.bye()
+            show_transition_message()
+            break
 
     for enemy in enemies:
         if player.is_collision(enemy):
