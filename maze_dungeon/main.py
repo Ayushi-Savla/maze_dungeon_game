@@ -377,8 +377,11 @@ while True:
             hud.goto(0, 0)
             hud.write("GAME OVER", align="center", font=("Arial", 24, "bold"))
             wn.update()
+            turtle.ontimer(turtle.bye, 5000)
+            break
             turtle.bye()
             break
 
 
     wn.update()
+
