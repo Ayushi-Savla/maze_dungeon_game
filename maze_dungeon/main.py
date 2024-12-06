@@ -3,15 +3,24 @@ import math
 import turtle
 import random
 from random import randint
-import pygame  # Import pygame for music and sound effects
+import pygame
+import os
 
 # Initialize pygame for music and sound effects
 pygame.init()
 pygame.mixer.init()
 
+base_path = os.path.dirname(__file__)
+music_folder = os.path.join(base_path, 'music')
+
 # Load background music and sound effects
 pygame.mixer.music.load("music/hyper-adventure-action-231544.mp3")  # Replace with your music file path
 pygame.mixer.music.play(-1)  # Play music indefinitely
+
+treasure_sound = pygame.mixer.Sound(os.path.join(music_folder, "item-pick-up-38258.wav"))
+enemy_collision_sound = pygame.mixer.Sound(os.path.join(music_folder, "doorhit-98828.wav"))
+mission_accomplished_sound = pygame.mixer.Sound(os.path.join(music_folder, "fanfare-46385.wav"))
+game_over_sound = pygame.mixer.Sound(os.path.join(music_folder, "game-over-160612.wav"))
 
 #window setup
 wn = turtle.Screen()
@@ -355,6 +364,7 @@ countdown()
 for enemy in enemies:
     turtle.ontimer(enemy.move, t = 250)
 
+
 while True:
     for treasure in treasures:
         if player.is_collision(treasure):
@@ -364,9 +374,12 @@ while True:
             treasure.destroy()
             treasures.remove(treasure)
             hud.update()
+            treasure_sound.play()  # Play sound when collecting treasure
+
         # Check if all treasures are collected
         if not treasures:
             show_transition_message()
+            mission_accomplished_sound.play()  # Play sound when mission is completed
             break
 
     for enemy in enemies:
@@ -375,12 +388,9 @@ while True:
             hud.clear()
             hud.goto(0, 0)
             hud.write("GAME OVER", align="center", font=("Arial", 24, "bold"))
+            game_over_sound.play()  # Play game over sound
             wn.update()
             turtle.ontimer(turtle.bye, 5000)
             break
-            turtle.bye()
-            break
-
 
     wn.update()
-
