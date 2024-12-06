@@ -19,7 +19,7 @@ The game challenges players with time constraints and strategic movements to max
 4. Race against the clock to complete the level.
 
 ## Installation
-1. Ensure you have Python installed (Python 3.x is recommended).
+1. Ensure you have Python installed (Python 3.12 is recommended).
 2. Clone the repository:
    ```bash
    git clone https://github.com/Ayushi-Savla/maze_dungeon_game
