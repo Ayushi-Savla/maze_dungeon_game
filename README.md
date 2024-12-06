@@ -44,6 +44,7 @@ The game requires the following Python modules:
 - math (built-in)
 - random (built-in)
 - turtle (built-in)
+- PyGame (built-in)
 
 Ensure you are running a Python version that supports these modules.
 
