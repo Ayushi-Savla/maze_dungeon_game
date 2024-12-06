@@ -1,7 +1,8 @@
 # Maze Dungeon Game
 
 ## Overview
-Maze Dungeon Game is a Python-based maze game where the goal is for the player to navigate through a maze, collect as many treasures as possible, and avoid moving bombs. The game consists of 3 levels.
+This is a simple maze game where the player controls an animated person. They navigate through the maze as they collect different collectibles/treasures. When all collectibles/treasures have been collected, it transitions to the next level. Once all the levels have been completed within the 1 minute time duration, the game ends. The player's score is constantly updated as they collect the treasures.
+
 
 The game challenges players with time constraints and strategic movements to maximize their score while avoiding hazards.
 
