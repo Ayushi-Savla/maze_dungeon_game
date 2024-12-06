@@ -54,8 +54,8 @@ If you'd like to contribute to the game, feel free to fork the repository and su
 
 
 ## Authors
-Ayushi Savla
-Victoria Mwaura
-Abigail Kariuki
-Mwenda Mugambi
-Daniella Iseu
+Ayushi Savla -149588
+Victoria Mwaura- 149998
+Abigail Kariuki- 150470
+Mwenda Mugambi- 150469
+Daniella Iseu- 150878
